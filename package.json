@@ -1,0 +1,29 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "I did this project to consolidate my knowledge of node.js, javascript with express and mongodb. The project is a REST API for an ecommerce store where you can create users and place orders.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IghorBeninca/learning-node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IghorBeninca/learning-node.js/issues"
+  },
+  "homepage": "https://github.com/IghorBeninca/learning-node.js#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  }
+}
