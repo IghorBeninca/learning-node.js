@@ -12,10 +12,4 @@ mongoose.connect(uri)
 
 const db = mongoose.connection;
 
-// Connection events
-db.on("error", console.error.bind(console, "Connection error:"));
-db.once("open", () => {
-  console.log("MongoDB connection opened successfully!");
-});
-
 export default db;

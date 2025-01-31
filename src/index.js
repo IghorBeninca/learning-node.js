@@ -1,6 +1,13 @@
 import express from "express";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import db from "./config/dbConnect.js";
+import routes from "./routes/index.js";
+
+// Connection events
+db.on("error", console.error.bind(console, "Connection error:"));
+db.once("open", () => {
+  console.log("MongoDB connection opened successfully!");
+});
 
 // Initial configurations
 dotenv.config();
@@ -10,10 +17,8 @@ const PORT = process.env.PORT || 3000; // Default port if not specified in .env
 // Middleware to parse JSON
 app.use(express.json());
 
-// Initial route
-app.get('/', (req, res) => {
-  res.status(200).send('API is ok!');
-});
+// Routes
+routes(app);
 
 // Start the server
 app.listen(PORT, () => {
